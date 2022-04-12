@@ -1,0 +1,214 @@
+#search{
+    width: calc(100% - 250px);
+    height: 45px;
+    margin: 5px auto;
+    line-height: 45px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.1);
+    padding: 10px 20px;
+}
+#search_input{
+    height: 45px;
+    line-height: 45px;
+    width: calc(100% - 10px);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    float: left;
+}
+#search_btn{
+    width: 90px;
+    height: 45px;
+    text-align: center;
+    text-indent: 0px;
+    border-radius: 10px;
+}
+#result_board{
+    padding: 5px;
+    text-align: left;
+    padding-top: 0px;
+    display: block;
+    max-height: calc(100vh - 110px);
+}
+.result_item{
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,.2);
+    border-radius: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+.result_item .title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+.result_item .content{
+    font-size: 12px;
+    overflow: hidden;
+    line-height: 20px;
+    max-width: none;
+    display: -webkit-box;
+    text-align: justify;
+    -webkit-line-clamp: 3;
+    white-space: pre-line;
+    -webkit-box-orient: vertical;
+}
+.child_item{
+    display: none;
+}
+.result_item.active .child_item{
+    display: block;
+}
+.result_item.active .content{
+    -webkit-line-clamp: unset;
+    overflow: unset;
+}
+.result_item.active .child_item{
+    padding: 10px 15px;
+    background: rgba(0,0,0,.03);
+    border-radius: 1em;
+    margin-bottom: 10px;
+}
+.result_item.active .child_item .child_title{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.result_item.active .child_item .child_content{
+    font-size: 12px;
+    white-space: pre-line;
+    color: #666;
+    margin-top: 6px;
+}
+.el-card{
+    padding:0;
+    margin-bottom: 10px;
+    /* border-radius: 1em; */
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    /* border: 1px solid #ddd; */
+}
+.el-card .el-card__body{
+    padding: 5px 10px;
+}
+.card_head_board{
+    height: 20px;
+    line-height: 20px;
+    font-size: .6em;
+}
+.card_head_board .el-button.is-circle{
+    height: 20px;
+    width: 20px;
+    padding:0;
+    float: right;
+    text-align: center;
+}
+.card_head_board .card_head_icon{
+    height: 14px;
+    display: inline-block;
+    line-height: 20px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.card_main_board{
+    padding: 0px;
+    padding-top: 10px;
+    min-height: 80px;
+}
+.card_main_board .card_main_item{
+    background: rgba(0,0,0,.04);
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-radius: .4em;
+    font-size: .8em;
+    text-align: left;
+}
+.card_main_content{
+    text-align: justify;
+}
+.card_main_board .card_main_icon{
+    height: 18px;
+    display: inline-block;
+    line-height: 20px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.card_main_board .card_main_title_link{
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.card_category{
+    border-radius: 1em;
+    background: rgba(229,54,44,.5);
+    padding: 0px 10px;
+    font-size: 1em;
+    color: white;
+    margin: 0px 5px;
+}
+.card_main_pic{    width: 80px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    max-width: calc(100% - 10px);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.2);}
+.weibo4_icon{
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    float: left;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.weibo10_desc1{
+    font-weight: bold;
+}
+.weibo10_icon{
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    line-height: 30px;
+    max-width: calc(100% - 10px);
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+}
+.weibo9_text{
+    border-radius: 5px;
+    margin: 2px 0px;
+}
+.weibo9_text  a{
+    text-decoration: none !important;
+    border-radius: 5px;
+    background: #E57373;
+    color: white;
+    padding: 0px 5px;
+    margin-right: 5px;
+}
+.url-icon  img{
+    height: 1em !important;
+}
+.weibo9_pic{
+    min-width: calc(100% / 3 - 2px);
+    height: 80px;
+    background-position: center;
+    float: left;
+    margin: 1px;
+    background-size: cover;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}

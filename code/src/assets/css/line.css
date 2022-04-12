@@ -1,0 +1,198 @@
+.w-e-text p{display: none;}
+li{list-style: none;}
+.line{
+    display: block;
+    border-radius: 10px;
+    min-height: 1.5em;
+    line-height: 1.5em !important;
+    width: 100%;
+    font-size: 1em;
+    list-style: none;
+    padding:5px 10px !important;
+    /* border: 1px solid #ddd; */
+    margin-bottom: 10px !important;
+    position: relative;
+}
+.w-e-text {
+    padding-bottom:100px;
+}
+.w-e-text-container.active_highlight .dialog_line{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.nr{/*人名*/
+    background: #B54434;
+    border-radius: 4px;
+    color: white;
+}
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.ns{/*地名*/
+    background: #91AD70;
+    border-radius: 4px;
+    color: white;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.nt{/*机构名*/
+    background: #89916B;
+    border-radius: 4px;
+    color: white;
+}
+/* .w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.f{方位名
+    background: #90B44B;
+    border-radius: 4px;
+} */
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.s{/*处所*/
+    background: #B5Caa0;
+    border-radius: 4px;
+    color: white;
+}
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.t{/*时间名*/
+    background: #77969a;
+    border-radius: 4px;
+    color: white;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.n{/*名词*/
+    background: #81C7D4;
+    border-radius: 4px;
+    color: white;
+}
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.nw{/*作品词*/
+    background: #8B81C3;
+    border-radius: 4px;
+    color: white;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.nz{/*其他词*/
+    background: #fffffB;
+    border-radius: 4px;
+    color: white;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.v,/*动词*/
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.vn,/*动名词*/
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.vd{/*动副词*/
+    border-bottom: 2px solid #2196F3;
+}
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.r{
+    font-weight: bold;
+    color:#b5495B;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.a,/*形容词*/
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.ad,/*副形词*/
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.an,/*名形词*/
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.b{
+    border-bottom: 2px dashed #b5495B;
+}
+
+.w-e-text-container.active_highlight .dialog_line .lc .tokenized-word.d/*副词*/{
+    border-bottom: 2px dotted #A8D8B9;
+}
+
+.w-e-text-container.active_highlight .action_line{
+    background:#f7f7f7;
+}
+
+.dialog_line{
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.action_line{
+    font-weight: bold;
+    text-indent: 15px;
+}
+.action_line::before{
+    content:"∆";
+    position: absolute;
+    left:-5px;
+}
+
+.annotate_line{
+    border:0px;
+    font-weight: bold;
+    color:green;
+    text-indent: 15px;
+    margin-bottom: 0px !important;
+    display: block;
+    border-radius: 10px;
+    min-height: 1.5em;
+    line-height: 1.5em !important;
+    width: 100%;
+    font-size: 1em;
+    list-style: none;
+    padding:5px 10px !important;
+    position: relative;
+}
+.annotate_line::before{
+    content: "//";
+    position: absolute;
+    left:-5px;
+}
+.dialog_line .man{
+    float: left;
+    margin-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease .5s;
+    position: relative;
+}
+.dialog_line .man::after{
+    content:":";
+    margin-left:5px;
+}
+.dialog_line .man:hover{
+    padding: 0px 10px;
+    margin: 0px 5px;
+    background: #e4e4e4;
+}
+
+.select_man{
+    position: absolute;
+    height: auto;
+    max-width: 250px;
+    background: white;
+    top: 100%;
+    z-index: 2;
+    border-radius: 1em;
+    display: flex;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+    flex-wrap: wrap;
+    min-width: 150px;
+}
+.select_man .select_item{
+    background: #efefef;
+    border-radius: 10px;
+    padding: 0px 5px;
+    font-size: 12px;
+    margin: 5px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: ease .5s;
+}
+.select_man .select_item:hover{
+    background: #7986CB;
+    color: white;
+}
+.select_man .select_item.c_btn{
+    height: 20px;
+    width: 20px;
+    background: #EF9A9A;
+}
+.select_man .select_item.c_btn:hover{
+    background: #EF5350;
+}
+.select_man .select_item.c_btn::before{
+    content: "✘";
+    line-height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    text-indent: 0px;
+    font-size: 10px;
+}

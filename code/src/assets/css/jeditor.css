@@ -1,0 +1,221 @@
+@font-face {
+font-family: 'iconfont';
+src: url('./iconfont/iconfont.eot');
+src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('./iconfont/iconfont.woff2') format('woff2'),
+    url('./iconfont/iconfont.woff') format('woff'),
+    url('./iconfont/iconfont.ttf') format('truetype'),
+    url('./iconfont/iconfont.svg#iconfont') format('svg');
+}
+#left_board{
+height:100%;
+width:300px;
+position: absolute;
+top:0px;
+left:0px;
+background:#EEE;
+box-shadow: 1px 0px 10px rgba(0,0,0,.2);
+transition:ease .5s;
+z-index:2;
+overflow: hidden;
+}
+#left_board::before{
+    content: "\e600";
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    bottom: -10%;
+    left: 80px;
+    font-size: 20em;
+    color: rgb(0 0 0 / 0.05);
+}
+#left_close_btn{
+background:#e91e63;
+margin-left: calc(100% - 60px);
+margin-top: 10px;
+}
+
+#right_board{
+width:calc(100% - 300px);
+height:100%;
+
+transition:ease .5s;
+position: absolute;
+right:0px;
+overflow: auto;
+}
+
+.center_main{
+  height:100%;
+  margin: 0 auto;
+  overflow:hidden;
+  margin: auto;
+}
+
+#logout{
+    position: absolute;
+    bottom: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    left: calc(50% - 25px);
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    line-height: 50px;
+    color: #E57373;
+    font-size: 25px;
+    text-align: center;
+    transition: ease .5s;
+}
+#logout:hover{
+background-color: #ddd;
+box-shadow: 2px 2px 5px -2px #999;
+}
+
+.jumu_item{
+height: 200px;
+width: 150px;
+margin:10px;
+background: #009688;
+
+border-radius: 10px;
+position:relative;
+overflow:hidden;
+box-shadow: 0px 2px 5px rgba(0,0,0,.2);
+border-left: 15px solid rgb(0 0 0 / 0.4);
+}
+
+.jumu_item .title{
+height: 50px;
+    width: calc(100% - 10px);
+    margin: 10px 5px;
+    line-height: 50px;
+    text-align: center;
+    margin-top:50px;
+    transition:ease .5s;
+    cursor:pointer;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 0px 6px 10px rgb(0 0 0 / 18%);
+}
+
+.jumu_item .title:hover{
+    transform: scale(1.1);
+}
+#new_add_jumu_item::before{
+    content: "\e6cc";
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    margin-right: 10px;
+    font-style: normal;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 10em;
+    bottom: -50px;
+    right: 10px;
+    color: #f9f9f9;
+    transition: ease .5s;
+}
+.jumu_item::before{
+    content: "\e6cd";
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    margin-right: 10px;
+    font-style: normal;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 10em;
+    bottom: -50px;
+    right: 10px;
+    color: #f9f9f9;
+    transition: ease .5s;
+}
+
+
+.jumu_item .c_time{
+font-size:12px;
+color:white;
+text-align:center;
+position: absolute;
+top: 0px;
+width: 100%;
+padding: 10px 0px;
+}
+
+.hidden_menu{
+    height: 40px;
+    width: calc(100% - 10px);
+    margin: 5px 5px;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 0.7);;
+    position: absolute;
+    bottom: -65px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    transition:ease .5s;
+    transform: scale(1.1);
+    backdrop-filter: blur(10px);
+}
+
+.jumu_item:hover
+.hidden_menu{
+    transform: scale(1);
+bottom:0px;
+}
+.jumu_item:hover:before{
+transform: scale(.9);
+}
+.jumu_item:hover .title{
+margin-top:30px;
+}
+#new_add_jumu_item:hover .hidden_menu
+{
+transform: scale(1);
+bottom:0px;
+}
+
+
+.hidden_menu .btn{
+    background: transparent;
+    color: black;
+    box-shadow: 0px 0px;
+    width: 35px;
+    float: left;
+    padding: 0px;
+    font-size: 14px;
+    font-weight:100;
+}
+.hidden_menu .btn:hover{
+color:#009688;
+}
+
+.cover-loading{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+}
+
+
+input[type="radio"]{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+.textEllipsis {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    word-break: normal !important;
+}
